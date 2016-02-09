@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ShapeSpace
+namespace ShapeSpace.ShapeFactory
 {
     abstract class A_Shape : IComparable<A_Shape>
     {
@@ -9,14 +9,14 @@ namespace ShapeSpace
         private double height;
         private string name;
 
-        public A_Shape(string name, double width, double height)
+        protected A_Shape(string name, double width, double height)
         {
             this.height = height;
             this.width = width;
             this.name = name;
         }
 
-        public A_Shape(string name, double width)
+        protected A_Shape(string name, double width)
         {
             this.width = width;
             this.name = name;
@@ -40,6 +40,12 @@ namespace ShapeSpace
         public void sort(List<A_Shape> list)
         {
             list.Sort();
+        }
+
+        public string toString()
+        {
+            string output = (this.getName() + ", Area: " + this.getArea());
+            return output;
         }
     }
 }

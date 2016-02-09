@@ -7,7 +7,13 @@ namespace ShapeSpace
     {
         public static void Main(String[] args)
         {
-            A
+            ShapeFactory.ShapeFactory factory = new ShapeFactory.ShapeFactory();
+
+            ShapeFactory.A_Shape mySquare = factory.getShape("square", "MyFirstSquare", 10);
+
+            Console.WriteLine(mySquare.toString());
+
+            Console.ReadLine();
         }
     }
 }

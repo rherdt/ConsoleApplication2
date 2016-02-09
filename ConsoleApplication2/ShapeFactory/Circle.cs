@@ -1,7 +1,7 @@
 ﻿using System;
 
 
-namespace ShapeSpace
+namespace ShapeSpace.ShapeFactory
 {
     class Circle : A_Shape
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ShapeSpace
+namespace ShapeSpace.ShapeFactory
 {
     class Rectangle: A_Shape
     {
